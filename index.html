@@ -13,7 +13,12 @@ body{margin:0;font-family:Arial,sans-serif;background:#0f172a;color:#fff}header{
 <section class="hero">
 <h1>Your Trusted Electronics Spare Parts Store</h1>
 <p>Buy wires, remotes, speakers, irons, glue guns and more at affordable prices.</p>
-<input class="search" placeholder="Search products like remote, wire, speaker..." />
+<input
+  id="searchInput"
+  class="search"
+  placeholder="Search products like remote, wire, speaker..."
+  onkeyup="searchProducts()"
+/>
 </section>
 <h2 class="section-title">Popular Products</h2>
 <section class="grid">
