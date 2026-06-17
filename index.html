@@ -22,12 +22,12 @@ body{margin:0;font-family:Arial,sans-serif;background:#0f172a;color:#fff}header{
 </section>
 <h2 class="section-title">Popular Products</h2>
 <section class="grid">
-<div class="card"><h3>TV Remote</h3><p>Compatible smart TV remote.</p><div class="price">₹299</div></div>
-<div class="card"><h3>Copper Wire</h3><p>High quality electrical wire.</p><div class="price">₹149</div></div>
-<div class="card"><h3>Bluetooth Speaker</h3><p>Portable speaker spare unit.</p><div class="price">₹599</div></div>
-<div class="card"><h3>Electric Iron</h3><p>Durable household iron.</p><div class="price">₹899</div></div>
-<div class="card"><h3>Glue Gun</h3><p>Fast heating glue gun.</p><div class="price">₹349</div></div>
-<div class="card"><h3>Charging Adapter</h3><p>Universal fast adapter.</p><div class="price">₹399</div></div>
+<div class="card product-card"><h3>TV Remote</h3><p>Compatible smart TV remote.</p><div class="price">₹299</div></div>
+<div class="card product-card"><h3>Copper Wire</h3><p>High quality electrical wire.</p><div class="price">₹149</div></div>
+<div class="card product-card"><h3>Bluetooth Speaker</h3><p>Portable speaker spare unit.</p><div class="price">₹599</div></div>
+<div class="card product-card"><h3>Electric Iron</h3><p>Durable household iron.</p><div class="price">₹899</div></div>
+<div class="card product-card"><h3>Glue Gun</h3><p>Fast heating glue gun.</p><div class="price">₹349</div></div>
+<div class="card product-card"><h3>Charging Adapter</h3><p>Universal fast adapter.</p><div class="price">₹399</div></div>
 </section>
 <section class="hero" style="padding-top:20px">
 <h2>Need Help Identifying a Part?</h2>
@@ -35,5 +35,21 @@ body{margin:0;font-family:Arial,sans-serif;background:#0f172a;color:#fff}header{
 <a class="btn" href="https://wa.me/919062019433">Scan via WhatsApp</a>
 </section>
 <div class="footer">© 2026 SpareX. All Rights Reserved.</div>
+  <script>
+function searchProducts() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let products = document.getElementsByClassName("product-card");
+
+    for (let i = 0; i < products.length; i++) {
+        let text = products[i].innerText.toLowerCase();
+
+        if (text.includes(input)) {
+            products[i].style.display = "block";
+        } else {
+            products[i].style.display = "none";
+        }
+    }
+}
+</script>
 </body>
 </html>
